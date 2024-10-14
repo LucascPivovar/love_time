@@ -1,0 +1,966 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+input[type="file"] {
+    position: relative;
+    width: 100%; /* Mantém a largura */
+    height: 2em; /* Mantém a altura */
+    cursor: pointer;
+    text-indent: -9999px; /* Move o texto do nome do arquivo para fora da área visível */
+}
+@media screen and (max-width: 380px) {
+    .page-container {
+        width: 100vw;
+        min-height: 250vh;
+        margin: 0 auto;
+        background-image: url("./assets/Tela\ cadastro\ 5.png");
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-container {
+        height: 100%;
+        width: 21%;
+        align-items: center;
+    }
+
+    .page-container h1 {
+        font-family: 'Inter', sans-serif;
+        font-size: 2em;
+        color: #000000;
+        text-align: center;
+    }
+
+    .page-container form {
+        width: 25em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .page-container form label {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: rgba(71, 51, 52, 1);
+        font-weight: 700;
+        margin: 5px;
+        margin-left: 20px;
+        margin-top: 1em;
+    }
+
+    .data {
+        height: 2em;
+        width: 90.5%;
+        font-family: 'Inter', sans-serif;   
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        margin-right: auto;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-left: 0.4rem;
+    }
+
+    #couple-name-input {
+        height: 2em;
+        width: 90%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        margin-right: auto;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-left: 0.4rem;
+
+    }
+
+    .page-container form p {
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        color: #000000;
+        text-align: end;
+        margin-right: 35px;
+        color: rgba(71, 51, 52, 0.8);
+        font-weight: 700;
+        margin-top: 3px;
+    }
+
+    #music {
+        height: 7em;
+        width: 88.7%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin: 0.5rem;
+        resize: none;
+
+    }
+
+    .page-container form textarea::placeholder {
+        color: #473334;
+        text-align: start;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 5px;
+    }   
+
+    #name-one {
+        height: 2em;
+        width: 89%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        margin-right: auto;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-left: 0.5rem;
+    }
+
+    
+
+    .characteristics {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .characteristicsOne{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .characteristicsTwo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .characteristics input {
+        height: 2em;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        width:80%;
+        margin-right: 2em;
+        
+    }
+
+    
+
+    .images {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #foto {
+        height: 2em;
+        width: 87%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: black;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        padding: 5px;
+        position: relative;
+    }
+
+    .images label {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: rgba(71, 51, 52, 1);
+        font-weight: 700;
+        margin: 5px;
+        margin-top: 1em;
+    }
+    
+    .images input {
+        height: 2em;
+        width: 87%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: black;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        padding: 5px;
+        position: relative;
+    }  
+
+
+    h3{
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: rgba(71, 51, 52, 1);
+        font-weight: 700;
+        margin: 5px;
+        margin-top: 1em;
+        margin-left: 1.5rem;
+    }
+
+    
+    /* Estilos para centralizar as imagens */
+    .image-preview {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin: 10px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    
+    #preview-foto-one-container, #preview-foto-two-container {
+        display: flex;
+        justify-content: center; /* Centraliza as imagens únicas */
+        align-items: center;
+    }
+    
+    #preview-couple-container {
+        display: flex;
+        justify-content: center; /* Centraliza as imagens múltiplas */
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap; /* Para que as imagens múltiplas fiquem em várias linhas, se necessário */
+    }
+    
+    #preview-couple-container img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    
+    #preview-couple-container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+
+
+    #final-message {
+        width: 80%;
+        height: 404px;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        text-align: start;
+        margin-bottom: 10px;
+        margin-right: 1.5rem;
+    }
+
+    #submit {
+        height: 52px;
+        width: 197px;
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: rgba(218, 26, 41, 1);
+        outline: none;
+        border-radius: 10px;        
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5); 
+        margin: 10px;
+        resize: none;
+    }
+        
+    #submit:hover {
+        background-color: rgb(112, 10, 19);
+
+    }
+    
+}
+
+@media screen and (min-width: 390px) and (max-width: 900px) {
+    .page-container {
+        width: 100vw;
+        min-height: 250vh;
+        margin: 0 auto;
+        background-image: url("./assets/Tela\ cadastro\ 5.png");
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .form-container {
+        height: 100%;
+        width: 21%;
+        align-items: center;
+    }
+
+    .page-container h1 {
+        font-family: 'Inter', sans-serif;
+        font-size: 2em;
+        color: #000000;
+        text-align: center;
+    }
+
+    .page-container form {
+        width: 25em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .page-container form label {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: rgba(71, 51, 52, 1);
+        font-weight: 700;
+        margin: 5px;
+        margin-left: 20px;
+        margin-top: 1em;
+    }
+
+    .data {
+        height: 2em;
+        width: 90.5%;
+        font-family: 'Inter', sans-serif;   
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        margin-right: auto;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-left: 20px;
+    }
+
+    #couple-name-input {
+        height: 2em;
+        width: 90%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        margin-right: auto;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-left: 20px;
+    }
+
+    .page-container form p {
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        color: #000000;
+        text-align: end;
+        margin-right: 35px;
+        color: rgba(71, 51, 52, 0.8);
+        font-weight: 700;
+        margin-top: 3px;
+    }
+
+    #music {
+        height: 7em;
+        width: 90%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-left: 20px;
+
+    }
+
+    .page-container form textarea::placeholder {
+        color: #473334;
+        text-align: start;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 5px;
+    }   
+
+    #name-one {
+        height: 2em;
+        width: 90%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        margin-right: auto;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-left: 20px;
+    }
+
+    
+
+    .characteristics {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .characteristicsOne{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .characteristicsTwo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .characteristics input {
+        height: 2em;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        position: relative;
+        width:85%;
+        
+    }
+
+    .images {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #foto {
+        height: 2em;
+        width: 88%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: black;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        padding: 5px;
+        position: relative;
+        right: 20px;
+    }
+
+    .images label {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: rgba(71, 51, 52, 1);
+        font-weight: 700;
+        margin: 5px;
+        margin-top: 1em;
+    }
+
+    .images input {
+        height: 2em;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        margin-right: 2.5em;
+        width: 19em;
+    }  
+    /* Estilos para centralizar as imagens */
+    .image-preview {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin: 10px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    
+    #preview-foto-one-container, #preview-foto-two-container {
+        display: flex;
+        justify-content: center; /* Centraliza as imagens únicas */
+        align-items: center;
+    }
+    
+    #preview-couple-container {
+        display: flex;
+        justify-content: center; /* Centraliza as imagens múltiplas */
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap; /* Para que as imagens múltiplas fiquem em várias linhas, se necessário */
+    }
+    
+    #preview-couple-container img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    
+    #preview-couple-container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    #foto {
+        height: 2em;
+        width: 88%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: black;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        padding: 5px;
+        position: relative;
+    }
+
+    .images label {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: rgba(71, 51, 52, 1);
+        font-weight: 700;
+        margin: 5px;
+        margin-top: 1em;
+    }
+
+    .images input {
+        height: 2em;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+    }
+
+    h3{
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: rgba(71, 51, 52, 1);
+        font-weight: 700;
+        margin: 5px;
+        margin-top: 1em;
+        margin-left: 2em;
+    }
+
+    #final-message {
+        width: 80%;
+        height: 404px;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        text-align: start;
+        margin-bottom: 10px;
+    }
+
+    #submit {
+        height: 52px;
+        width: 197px;
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: rgba(218, 26, 41, 1);
+        outline: none;
+        border-radius: 10px;        
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5); 
+        margin: 10px;
+        resize: none;
+    }
+        
+    #submit:hover {
+        background-color: rgb(112, 10, 19);
+    }
+
+
+
+}
+
+
+@media screen and (min-width: 900px) {
+    .page-container {
+        width: 100vw;
+        min-height: 250vh;
+        margin: 0 auto;
+        background-image: url("./assets/Tela\ cadastro\ 5.png");
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container {
+        height: 100%;
+        width: 21%;
+    }
+
+    .page-container h1 {
+        font-family: 'Inter', sans-serif;
+        font-size: 2em;
+        color: #000000;
+        text-align: center;
+    }
+
+    .page-container form {
+        width: 25em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .page-container form label {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: rgba(71, 51, 52, 1);
+        font-weight: 700;
+        margin: 5px;
+        margin-left: 5px;
+        margin-top: 1em;
+    }
+
+    .data {
+        height: 2em;
+        width: 90.5%;
+        font-family: 'Inter', sans-serif;   
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        margin-right: auto;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+
+    #couple-name-input {
+        height: 2em;
+        width: 90%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        margin-right: auto;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+
+    .page-container form p {
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        color: #000000;
+        text-align: end;
+        margin-right: 35px;
+        color: rgba(71, 51, 52, 0.8);
+        font-weight: 700;
+        margin-top: 3px;
+    }
+
+    #music {
+        height: 7em;
+        width: 90%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+
+    }
+
+    .page-container form textarea::placeholder {
+        color: #473334;
+        text-align: start;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 5px;
+    }   
+
+    #name-one {
+        height: 2em;
+        width: 90%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        margin-right: auto;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
+
+    
+
+    .characteristics {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .characteristicsOne{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .characteristicsTwo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .characteristics input {
+        height: 2em;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        position: relative;
+        width:85%;
+        right: 18px;
+        
+    }
+
+    
+
+    .images {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #foto {
+        height: 2em;
+        width: 88%;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: black;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        padding: 5px;
+        position: relative;
+        right: 20px;
+    }
+
+    .images label {
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: rgba(71, 51, 52, 1);
+        font-weight: 700;
+        margin: 5px;
+        margin-top: 1em;
+    }
+
+    .images input {
+        height: 2em;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin: 10px;
+        margin-right: 2.5em;
+        width: 19em;
+
+    }  .image-preview {
+        display: none; /* Oculto até que uma imagem seja carregada */
+        width: 150px;
+        height: 150px;
+        margin-top: 10px;
+        object-fit: cover; /* Ajusta a imagem ao tamanho da caixa */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .image-preview {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+    }
+    
+    #preview-couple-container {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    #preview-couple-container img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+    }
+    h3{
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        color: rgba(71, 51, 52, 1);
+        font-weight: 700;
+        margin: 5px;
+        margin-top: 1em;
+        margin-left: 2em;
+    }
+
+    #final-message {
+        width: 80%;
+        height: 404px;
+        font-family: 'Inter', sans-serif;
+        font-size: 1.2em;
+        color: #000000;
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: #D9D9D9;
+        outline: none;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        text-align: start;
+        margin-bottom: 10px;
+        margin-right: 40px;
+    }
+
+    #submit {
+        height: 52px;
+        width: 197px;
+        font-family: 'Inter', sans-serif;
+        font-size: 24px;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        align-self: center;
+        border: none;
+        background-color: rgba(218, 26, 41, 1);
+        outline: none;
+        border-radius: 10px;        
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5); 
+        margin: 10px;
+        resize: none;
+        margin-right: 2em;
+    }
+        
+    #submit:hover {
+        background-color: rgb(112, 10, 19);
+    }
+
+
+}

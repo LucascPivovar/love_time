@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article>
+        <section class="page-container"> 
+            <div class="form-container">    
+                <form method="post">
+                    <h1>Cadastro</h1>
+                    <div class="part-one">
+                        <label for="name" id="couple-name-label">Nome do casal:</label>
+                        <input type="text" id="couple-name-input" name="nome" required>
+                        <p>(apelidos ou nomes)</p>
+
+                        <label for="start-date" id="data">Data inicial:</label>
+                        <input type="date" id="start-date" name="Data Inicial" class="data" required>
+                        <p>(Primeiro, encontro,<br> namoro, casamento)</p>
+
+                        <label for="songs">Escolha 6 músicas</label>
+                        <textarea name="musicas" rows="5" cols="30" id="music" required></textarea>
+                        <p>(A primeira será <br>destacada)</p>
+                    </div>
+
+                    <label for="nameOne" id="nome1">Nome pessoa 1:</label>
+                    <input type="text" id="name-one" name="nameOne" required>
+
+                    <label for="nameOne" id="nome2">Nome pessoa 2:</label>
+                    <input type="text" id="name-one" name="nameTwo" required>
+                    <!-- Uploads de imagens -->
+                    <div class="images">
+                        <!-- Foto pessoa 1 -->
+                        <label for="foto-one">Foto pessoa 1</label>
+                        <input type="file" id="foto-one" name="foto-one" accept="image/*" required>
+                        <div id="preview-foto-one-container"></div> <!-- Container da pré-visualização -->
+
+                        <!-- Foto pessoa 2 -->
+                        <label for="foto-two">Foto pessoa 2</label>
+                        <input type="file" id="foto-two" name="foto-two" accept="image/*" required>
+                        <div id="preview-foto-two-container"></div> <!-- Container da pré-visualização -->
+
+                        <!-- Fotos do casal -->
+                        <label for="couple-fotos">De 4 a 6 fotos do casal</label>
+                        <input type="file" id="couple-fotos" name="couple-fotos" accept="image/*" multiple required>
+                        <div id="preview-couple-container"></div> <!-- Container para as miniaturas das imagens -->
+                    </div>
+            
+                    <h3>Mensagem final</h3>
+                    <textarea name="mensagem" rows="50" cols="300" id="final-message" style="resize: none;"></textarea>
+
+                    <button id="submit" type="submit">Finalizar</button>
+                </form>
+            </div>
+        </section>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>
