@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Array para armazenar as imagens selecionadas
+    let fileArray = [];
+
     // Função para exibir a pré-visualização de uma única imagem e permitir remoção ao clicar
     function previewSingleImage(input, containerId) {
         const container = document.getElementById(containerId);
@@ -10,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             reader.onload = function(e) {
                 const imgElement = document.createElement('img');
                 imgElement.src = e.target.result;
-                imgElement.style.width = '100px'; // Largura da imagem
+                imgElement.style.width = '100px';
                 imgElement.style.margin = '2px';
                 imgElement.style.cursor = 'pointer';
 
@@ -20,40 +23,49 @@ document.addEventListener('DOMContentLoaded', function() {
                     input.value = ''; // Reseta o input file
                 });
 
-                container.appendChild(imgElement); // Adiciona a imagem ao container
+                container.appendChild(imgElement);
             };
-            reader.readAsDataURL(file); // Lê o arquivo e dispara o onload
+            reader.readAsDataURL(file);
         }
     }
 
-    // Função para exibir a pré-visualização de múltiplas imagens e permitir remoção ao clicar
-    function previewMultipleImages(input, containerId) {
+    // Função para exibir e acumular múltiplas imagens
+    function previewMultipleImages(input, containerId, maxFiles = 6) {
         const container = document.getElementById(containerId);
-        container.innerHTML = ''; // Limpa o container antes de adicionar novas imagens
+        const files = Array.from(input.files);
 
-        const files = input.files;
-        if (files.length > 0) {
-            Array.from(files).forEach((file, index) => {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const imgElement = document.createElement('img');
-                    imgElement.src = e.target.result;
-                    imgElement.style.width = '100px'; // Largura da imagem
-                    imgElement.style.margin = '2px';
-                    imgElement.style.cursor = 'pointer';
-
-                    // Adiciona evento para remover a imagem ao clicar
-                    imgElement.addEventListener('click', function() {
-                        imgElement.remove(); // Remove a imagem ao clicar nela
-                    });
-
-                    container.appendChild(imgElement); // Adiciona a imagem ao container
-                };
-                reader.readAsDataURL(file); // Lê cada arquivo
-            });
+        // Verifica o total de imagens após a adição
+        if (fileArray.length + files.length > maxFiles) {
+            alert(`Você só pode enviar até ${maxFiles} fotos.`);
+            return;
         }
-    }
 
+        files.forEach((file) => {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imgElement = document.createElement('img');
+                imgElement.src = e.target.result;
+                imgElement.style.width = '100px';
+                imgElement.style.margin = '2px';
+                imgElement.style.cursor = 'pointer';
+
+                // Adiciona evento para remover a imagem ao clicar
+                imgElement.addEventListener('click', function() {
+                    // Remove a imagem do DOM e do array
+                    imgElement.remove();
+                    fileArray = fileArray.filter((f) => f !== file);
+                });
+
+                // Adiciona a imagem ao container e ao array de arquivos
+                container.appendChild(imgElement);
+                fileArray.push(file);
+            };
+            reader.readAsDataURL(file);
+        });
+
+        // Limpa o input para permitir a seleção dos mesmos arquivos novamente
+        input.value = '';
+    }
 
     // Eventos para as imagens únicas
     document.getElementById('foto-one').addEventListener('change', function() {
@@ -64,8 +76,8 @@ document.addEventListener('DOMContentLoaded', function() {
         previewSingleImage(this, 'preview-foto-two-container');
     });
 
-    // Evento para as múltiplas imagens do casal
+    // Evento para as múltiplas imagens do casal, limitado a 6 fotos
     document.getElementById('couple-fotos').addEventListener('change', function() {
-        previewMultipleImages(this, 'preview-couple-container');
+        previewMultipleImages(this, 'preview-couple-container', 6);
     });
 });

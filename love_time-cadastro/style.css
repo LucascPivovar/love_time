@@ -141,28 +141,15 @@ input[type="file"] {
 
     
 
+
     .characteristics {
         width: 100%;
         display: flex;
         flex-direction: row;
     }
 
-    .characteristicsOne{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-    }
-
-    .characteristicsTwo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-    }
-
     .characteristics input {
-        height: 2em;
+        height: 2.5rem;
         font-family: 'Inter', sans-serif;
         font-size: 1rem;
         color: #000000;
@@ -174,11 +161,11 @@ input[type="file"] {
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         margin: 10px;
-        width:80%;
-        margin-right: 2em;
+        position: relative;
+        width:77%;
+        right: 0.1rem;
         
     }
-
     
 
     .images {
@@ -458,22 +445,8 @@ input[type="file"] {
         flex-direction: row;
     }
 
-    .characteristicsOne{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-    }
-
-    .characteristicsTwo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-    }
-
     .characteristics input {
-        height: 2em;
+        height: 2.5rem;
         font-family: 'Inter', sans-serif;
         font-size: 1rem;
         color: #000000;
@@ -486,9 +459,12 @@ input[type="file"] {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         margin: 10px;
         position: relative;
-        width:85%;
+        width:80%;
+        left: 0.7rem;
         
     }
+
+    
 
     .images {
         width: 100%;
@@ -765,6 +741,7 @@ input[type="file"] {
         outline: none;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         border-radius: 5px;
+        resize: none;
 
     }
 
@@ -800,22 +777,8 @@ input[type="file"] {
         flex-direction: row;
     }
 
-    .characteristicsOne{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-    }
-
-    .characteristicsTwo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-    }
-
     .characteristics input {
-        height: 2em;
+        height: 2.5rem;
         font-family: 'Inter', sans-serif;
         font-size: 1rem;
         color: #000000;
@@ -828,8 +791,8 @@ input[type="file"] {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         margin: 10px;
         position: relative;
-        width:85%;
-        right: 18px;
+        width:80%;
+        right: 0.7rem;
         
     }
 
